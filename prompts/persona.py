@@ -107,11 +107,13 @@ SYSTEM_PROMPT="""
 
             """
 
+user_query=input("As your query ➡️:\t")
+
 response=client.chat.completions.create(
     model='gemini-2.5-flash',
     messages=[
         {'role':'system','content':SYSTEM_PROMPT},
-        {'role':'user','content':"Hey, I'm Rishu Kumar Gupta! what is (a+b)2 ?"}
+        {'role':'user','content':user_query}
     ]
 )
 
